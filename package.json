@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@types/react": "^17.0.8"
+  }
+}
