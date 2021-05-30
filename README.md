@@ -2,7 +2,7 @@
 
 We are excited you are interested in putting your name in the hat for an internship or entry level position here at Midwestern Interactive. Please read the instructions carefully and follow the steps of the benchmark process.
 
-## Instructions
+## Instructions 
 
 Please complete the following steps to the best of your ability. All applications should be housed in a github repository with at least 1 push named firstname_lastname-MM-YYYY if you don't have an account please create one. Please send the resulting repository link to the person you've been in contact with. In that folder is a readme file that you should use to record your results and information on each of the following steps.
 
