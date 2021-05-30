@@ -15,6 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+// The main view is broken down into sectioned components for easier management and
+// potential reuse, such as with the header and footer.
 const MwiBenchmarkView = () => {
   const classes = useStyles();
   return (
