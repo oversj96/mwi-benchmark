@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { Skeleton } from "@material-ui/lab";
 import React from "react";
+import MWIButton from "../../Buttons/MWIButton";
 
 interface ArticlesProps {
   imageURI: string;
@@ -29,16 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#000000",
-      main: "#000000",
-      dark: "#333333",
-    },
-  },
-});
-
 const Article = (props: ArticlesProps) => {
   const classes = useStyles();
   return (
@@ -57,7 +48,9 @@ const Article = (props: ArticlesProps) => {
         </Typography>
       </Grid>
       <Grid item>
-        
+        <div style={{ marginTop: 20 }}>
+          <MWIButton text="Read More" />
+        </div>
       </Grid>
     </Grid>
   );
