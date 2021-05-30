@@ -77,6 +77,7 @@ const ContactForm = (props: any) => {
                       id="email"
                       helperText={errors.email ? errors.email.message : null}
                       label="Email"
+                      placeholder="Any_Email@AwesomeMail.com"
                       error={errors.email}
                     />
                   </MuiThemeProvider>
@@ -84,7 +85,7 @@ const ContactForm = (props: any) => {
                 control={control}
                 defaultValue=""
                 rules={{
-                  required: "Required",
+                  required: "An email address is required.",
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                     message: "Invalid email address",
@@ -105,6 +106,7 @@ const ContactForm = (props: any) => {
                       id="subject"
                       helperText={errors.subject ? errors.subject.message : null}
                       label="Subject"
+                      placeholder="I Have A Question!"
                       error={errors.subject}
                     />
                   </MuiThemeProvider>
@@ -112,7 +114,7 @@ const ContactForm = (props: any) => {
                 control={control}
                 defaultValue=""
                 rules={{
-                  required: "Required",
+                  required: "Subject line cannot be empty.",
                   pattern: {
                     value: /(.|\s)*\S(.|\s)*/,
                     message: "Subject line cannot be empty.",
@@ -129,20 +131,22 @@ const ContactForm = (props: any) => {
                   <MuiThemeProvider theme={theme}>
                     <TextField
                       {...field}
+                      variant="outlined"
                       style={{ width: 400 }}
                       id="message"
-                      rows={10}
+                      multiline
+                      rows={5}
                       label="Message"
-                      error={errors.subject}
-                      helperText={errors.subject ? errors.subject.message : null}
-                      placeholder=" Please enter your message here :)"
+                      error={errors.message}
+                      helperText={errors.message ? errors.message.message : null}
+                      placeholder={"Hi, \n\nI was wondering if..."}
                     />
                   </MuiThemeProvider>
                 )}
                 control={control}
                 defaultValue=""
                 rules={{
-                  required: "Required",
+                  required: "The message cannot be blank.",
                   pattern: {
                     value: /(.|\s)*\S(.|\s)*/,
                     message: "Message cannot be empty",

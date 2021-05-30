@@ -52,7 +52,8 @@ const Puzzle = (props: any) => {
       // so we use Array.from() to convert it back into one.
       // This might be less performant than simply looping and comparing but its less code
       // and more maintainable I think.
-      setNamesList(Array.from(new Set([...objectOne, ...objectTwo])));
+      let namesUnionList = Array.from(new Set([...objectOne, ...objectTwo]));
+      setNamesList(namesUnionList);
     }
   };
 
